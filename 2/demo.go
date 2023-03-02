@@ -93,7 +93,7 @@ func main() {
 					if dkwhatido == "Printf" {
 						str1 := fset.Position(hzwhatido.Pos()).Line
 						str2 := strings.Split(hzwhatido.Args[0].(*ast.BasicLit).Value, "\"")
-						str3 := "\"" + strconv.Itoa(str1) + "(" + nameoffunc + ")" + strings.Join(str2, " ") + "\""
+						str3 := "\"" + strconv.Itoa(str1) + "(" + nameoffunc + "):" + strings.Join(str2, " ") + "\""
 						hzwhatido.Args[0].(*ast.BasicLit).Value = str3
 					}
 				}
